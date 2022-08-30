@@ -1,0 +1,124 @@
+@include media-md {
+  video {
+    position: fixed;
+    right: 0;
+    top: 60px;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    z-index: -50;
+    object-fit: fill;
+  }
+  
+  .menu-btn {
+    visibility: hidden;
+  }
+
+  .nav {
+    display: flex;
+    visibility: visible;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $primary-color;
+
+    .menu-nav {
+      display: block;
+      transform: translateY(0);
+      height: 60px;
+      background: transparent;
+      text-align: right;
+      
+
+      &__item {
+        display: inline;
+        padding-right: 1.5rem;
+      }
+
+      &__link {
+        font-size: 1.5rem;
+      }
+
+      &__logo {
+        display: flex;
+        align-items: center;
+        background-color: $primary-color;
+        margin-left: 1rem;
+        padding: 0.8rem 0;
+      }
+    }
+  }
+  
+
+  .about {
+    background: 
+      linear-gradient(
+        to right,
+        rgba($primary-color, 0.9),
+        rgba($primary-color, 0.3)
+      );
+    &__bio{
+      font-size: 1.5rem;
+      background: transparent;
+       &-image{
+        background: transparent;
+        position: relative;
+        justify-content: space-around;
+       }
+    }
+
+    footer {
+      transform: rotate(0deg) ;
+      right: 0rem;
+    }
+    
+    
+  }
+
+  .projects {
+    background: linear-gradient(to top, 
+    rgba(40, 40, 40, 0.9), 
+    rgba(40, 40, 40, 0.3)), 
+    center top;
+    &__bio-image {
+      height: 40vh;
+      background: transparent;
+    }
+    &__items {
+      grid-template-columns: repeat(2, 1fr);
+      background: transparent;
+    }
+    .text-secondary {
+      font-size: 3rem;
+    }
+    footer{
+      transform: rotate(0deg);
+    }
+  }
+  .contact{
+    padding-top: 40vh;
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    &__video{
+      top: -7rem;
+    }
+  }
+  
+}
+
+@include media-lg {
+  .projects {
+    &__items {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  .contact__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@include media-xl {
+  .projects__bio-image {
+    height: 50vh;
+  }
+}
